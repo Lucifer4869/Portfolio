@@ -24,6 +24,7 @@ const projects = [
     status: 'Completed',
     image: null,
     featured: false,
+    link: 'https://github.com/Lucifer4869/myai'
   },
   {
     id: 3,
@@ -48,6 +49,12 @@ const projects = [
     featured: false,
   },
 ]
+
+function openLink(url) {
+  if (url) {
+    window.open(url, '_blank')
+  }
+}
 </script>
 
 <template>
@@ -75,7 +82,8 @@ const projects = [
           v-for="p in projects"
           :key="p.id"
           class="project-card"
-          :class="{ featured: p.featured }"
+          :class="{ featured: p.featured, 'is-clickable': !!p.link }"
+          @click="openLink(p.link)"
         >
           <div class="card-glow" :style="{ background: p.color }"></div>
           <div class="card-inner">
@@ -199,6 +207,7 @@ const projects = [
 }
 .project-card:hover { transform: translateY(-6px); border-color: var(--accent); box-shadow: 0 20px 48px rgba(0,0,0,0.4); }
 .project-card.featured { border-color: rgba(124,58,237,0.35); }
+.project-card.is-clickable { cursor: pointer; }
 
 .card-glow {
   position: absolute; top: -60px; right: -60px;
