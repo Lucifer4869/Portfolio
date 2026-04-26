@@ -47,11 +47,16 @@
           <a href="#contact" class="btn-ghost">ติดต่อ</a>
         </div>
 
-        <!-- Tech stack with devicons -->
-        <div class="tech-row">
-          <div v-for="t in techs" :key="t.name" class="tech-icon-pill">
-            <img :src="t.icon" :alt="t.name" class="tech-img" />
-            <span>{{ t.name }}</span>
+        <!-- Contact Details -->
+        <div class="contact-row">
+          <a href="mailto:band4869@gmail.com" class="contact-pill">
+            <span class="contact-icon">📧</span> band4869@gmail.com
+          </a>
+          <a href="tel:0805859329" class="contact-pill">
+            <span class="contact-icon">📞</span> 080-585-9329
+          </a>
+          <div class="contact-pill">
+            <span class="contact-icon">📍</span> แขวงแสมดำ กรุงเทพฯ
           </div>
         </div>
       </div>
@@ -73,18 +78,6 @@
 import coverImg   from '../assets/cover.jpg'
 import profileImg from '../assets/profile.png'
 
-const techs = [
-  { name: 'Python',     icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg' },
-  { name: 'Java',       icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg' },
-  { name: 'C++',        icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg' },
-  { name: 'C',          icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg' },
-  { name: '.NET',       icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dotnetcore/dotnetcore-original.svg' },
-  { name: 'Django',     icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg' },
-  { name: 'Vue.js',     icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg' },
-  { name: 'Docker',     icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg' },
-  { name: 'Arduino',    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/arduino/arduino-original.svg' },
-  { name: 'MySQL',      icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg' },
-]
 </script>
 
 <style scoped>
@@ -227,35 +220,35 @@ h1 {
 }
 .btn-ghost:hover { border-color: var(--accent); color: var(--text-primary); background: rgba(124,58,237,0.08); }
 
-/* Tech icons row */
-.tech-row {
+/* Contact Details Row */
+.contact-row {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.5rem;
+  gap: 0.75rem;
+  margin-top: 0.5rem;
 }
-.tech-icon-pill {
+.contact-pill {
   display: flex;
   align-items: center;
-  gap: 6px;
-  padding: 5px 12px;
+  gap: 8px;
+  padding: 8px 16px;
   border-radius: 99px;
-  background: rgba(255,255,255,0.04);
+  background: rgba(255,255,255,0.03);
   border: 1px solid var(--border-subtle);
   color: var(--text-secondary);
-  font-size: 0.75rem;
+  font-size: 0.8rem;
   font-weight: 500;
+  text-decoration: none;
   transition: all 0.2s;
 }
-.tech-icon-pill:hover {
+a.contact-pill:hover {
   border-color: var(--accent);
   color: var(--text-primary);
   background: rgba(124,58,237,0.1);
+  transform: translateY(-2px);
 }
-.tech-img {
-  width: 18px;
-  height: 18px;
-  object-fit: contain;
-  flex-shrink: 0;
+.contact-icon {
+  font-size: 1rem;
 }
 
 /* ── Photo column ── */
@@ -337,7 +330,7 @@ h1 {
     justify-content: center;
   }
 
-  .tech-row {
+  .contact-row {
     justify-content: center;
   }
 

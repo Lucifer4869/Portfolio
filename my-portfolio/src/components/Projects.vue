@@ -53,7 +53,6 @@ const projects = [
 <template>
   <section id="projects" class="projects">
     <div class="container">
-      <p class="tag" style="display:block;text-align:center;margin-bottom:1rem;">What I've built</p>
       <h2 class="section-title">Projects</h2>
       <p class="section-subtitle">ผลงานที่พัฒนาขึ้นจากประสบการณ์จริงและเพื่อการใช้งานจริง</p>
 

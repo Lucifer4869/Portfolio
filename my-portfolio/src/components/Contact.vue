@@ -1,32 +1,11 @@
 <template>
   <section id="contact" class="contact">
     <div class="container">
-      <p class="tag" style="display:block;text-align:center;margin-bottom:1rem;">Get in touch</p>
       <h2 class="section-title">Contact Me</h2>
-      <p class="section-subtitle">มีโปรเจคที่น่าสนใจ? ติดต่อได้เลยครับ</p>
+      <p class="section-subtitle">หากสนใจอยากร่วมงานหรือมีข้อสงสัย สามารถติดต่อผ่านทางนี้ได้เลยครับ</p>
 
       <div class="contact-grid">
-        <!-- LEFT: Contact info -->
-        <div class="contact-info">
-          <a v-for="info in contacts" :key="info.label"
-             :href="info.href" class="info-item" target="_blank">
-            <span class="info-icon">{{ info.icon }}</span>
-            <div>
-              <div class="info-label">{{ info.label }}</div>
-              <div class="info-value">{{ info.value }}</div>
-            </div>
-          </a>
-
-          <div class="response-note">
-            <span class="note-icon">⚡</span>
-            <div>
-              <div class="note-title">ตอบกลับเร็ว</div>
-              <div class="note-desc">ภายใน 24 ชั่วโมง · ทุกวัน</div>
-            </div>
-          </div>
-        </div>
-
-        <!-- RIGHT: Form -->
+        <!-- Form Only -->
         <form class="contact-form" @submit.prevent="handleSubmit">
           <!-- Success -->
           <transition name="fade">
@@ -111,12 +90,6 @@ const status   = ref('idle')   // idle | loading | success | error
 const errorMsg = ref('')
 const form = reactive({ name: '', email: '', subject: '', message: '' })
 
-const contacts = [
-  { icon: '📧', label: 'Email',    value: 'band4869@gmail.com',                     href: 'mailto:band4869@gmail.com' },
-  { icon: '📞', label: 'Phone',    value: '080-585-9329',                            href: 'tel:0805859329' },
-  { icon: '📍', label: 'Location', value: 'แขวงแสมดำ เขตบางขุนเทียน กทม. 10150',   href: 'https://maps.google.com/?q=Samae+Dam+Bangkok' },
-]
-
 async function handleSubmit() {
   status.value   = 'loading'
   errorMsg.value = ''
@@ -153,56 +126,23 @@ async function handleSubmit() {
 }
 
 .contact-grid {
-  display: grid;
-  grid-template-columns: 1fr 1.8fr;
-  gap: 3rem;
-  align-items: start;
-}
-
-/* ── Info side ── */
-.contact-info { display: flex; flex-direction: column; gap: 1rem; }
-
-.info-item {
   display: flex;
-  align-items: flex-start;
-  gap: 1rem;
-  background: var(--bg-card);
-  border: 1px solid var(--border-subtle);
-  border-radius: var(--radius-sm);
-  padding: 1rem 1.25rem;
-  text-decoration: none;
-  transition: border-color 0.2s, transform 0.2s;
-}
-.info-item:hover { border-color: var(--accent); transform: translateX(3px); }
-.info-icon { font-size: 1.4rem; flex-shrink: 0; }
-.info-label {
-  font-size: 0.68rem; color: var(--text-muted);
-  font-weight: 700; letter-spacing: 0.07em; text-transform: uppercase; margin-bottom: 3px;
-}
-.info-value { color: var(--text-primary); font-size: 0.88rem; font-weight: 500; }
-
-.response-note {
-  display: flex;
+  justify-content: center;
   align-items: center;
-  gap: 1rem;
-  background: rgba(124,58,237,0.07);
-  border: 1px dashed var(--border);
-  border-radius: var(--radius-sm);
-  padding: 1rem 1.25rem;
+  width: 100%;
 }
-.note-icon { font-size: 1.4rem; }
-.note-title { font-size: 0.82rem; font-weight: 700; color: var(--accent-light); margin-bottom: 2px; }
-.note-desc  { font-size: 0.78rem; color: var(--text-secondary); }
 
 /* ── Form ── */
 .contact-form {
   background: var(--bg-card);
   border: 1px solid var(--border-subtle);
   border-radius: var(--radius);
-  padding: 2rem;
+  padding: 2.5rem;
   display: flex;
   flex-direction: column;
   gap: 1.1rem;
+  width: 100%;
+  max-width: 650px;
 }
 
 /* Status */

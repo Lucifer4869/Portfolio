@@ -10,8 +10,8 @@ import Contact from './components/Contact.vue'
   <Navbar />
   <main>
     <Hero />
-    <About />
     <Projects />
+    <About />
     <Contact />
   </main>
 </template>

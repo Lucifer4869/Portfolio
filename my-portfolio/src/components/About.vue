@@ -1,7 +1,6 @@
 <template>
   <section id="about" class="about">
     <div class="container">
-      <p class="tag" style="display:block;text-align:center;margin-bottom:1rem;">Who am I?</p>
       <h2 class="section-title">About Me</h2>
       <p class="section-subtitle">นักพัฒนาที่หลงรักการแก้ปัญหาด้วยเทคโนโลยี</p>
 
@@ -72,9 +71,10 @@
             </div>
           </div>
 
-          <!-- Language icons card -->
-          <div class="lang-card">
-            <h4>💻 ภาษาโปรแกรม</h4>
+          <!-- Technical Skills -->
+          <div class="tech-skills-card">
+            <h4>💻 Technical Skills</h4>
+            
             <div class="lang-icons-grid">
               <div v-for="l in langs" :key="l.name" class="lang-icon-item">
                 <div class="lang-icon-wrap">
@@ -83,11 +83,7 @@
                 <span class="lang-icon-name">{{ l.name }}</span>
               </div>
             </div>
-          </div>
 
-          <!-- Skills -->
-          <div class="skills-block">
-            <h4>ระดับทักษะ</h4>
             <div class="skill-bars">
               <div v-for="s in skills" :key="s.name" class="skill-row">
                 <div class="skill-meta">
@@ -266,16 +262,16 @@ a.bio-contact-item:hover { color: var(--accent-light); }
 .info-card p { font-size: 0.83rem; color: var(--text-secondary); line-height: 1.65; }
 .info-card strong { color: var(--text-primary); }
 
-/* Language icon card */
-.lang-card {
+/* Tech skills card */
+.tech-skills-card {
   background: var(--bg-card);
   border: 1px solid var(--border-subtle);
   border-radius: var(--radius);
   padding: 1.5rem;
   transition: border-color 0.2s;
 }
-.lang-card:hover { border-color: var(--accent); }
-.lang-card h4 { font-size: 0.9rem; font-weight: 600; margin-bottom: 1rem; }
+.tech-skills-card:hover { border-color: var(--accent); }
+.tech-skills-card h4 { font-size: 1rem; font-weight: 600; margin-bottom: 1.25rem; }
 
 .lang-icons-grid {
   display: grid;
@@ -324,14 +320,7 @@ a.bio-contact-item:hover { color: var(--accent-light); }
 }
 
 /* Skills */
-.skills-block {
-  background: var(--bg-card);
-  border: 1px solid var(--border-subtle);
-  border-radius: var(--radius);
-  padding: 1.5rem;
-}
-.skills-block h4 { font-size: 0.9rem; font-weight: 600; margin-bottom: 1rem; }
-.skill-bars { display: flex; flex-direction: column; gap: 0.8rem; }
+.skill-bars { display: flex; flex-direction: column; gap: 0.8rem; margin-top: 2rem; }
 .skill-meta {
   display: flex; justify-content: space-between;
   font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 5px;
