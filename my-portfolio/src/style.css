@@ -54,6 +54,12 @@ body {
   padding: 0 50px;
 }
 
+@media (max-width: 768px) {
+  .container {
+    padding: 0 24px;
+  }
+}
+
 /* ── Section heading ── */
 .section-title {
   font-size: 2rem;

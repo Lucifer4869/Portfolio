@@ -136,4 +136,48 @@ onUnmounted(() => window.removeEventListener('scroll', handleScroll))
   box-shadow: 0 0 20px var(--accent-glow);
   transform: translateY(-1px);
 }
+
+/* ── Mobile Responsive ── */
+@media (max-width: 768px) {
+  .nav {
+    padding: 0 24px;
+  }
+  
+  .logo {
+    font-size: 1.25rem;
+  }
+  
+  .logo-dot {
+    width: 24px;
+    height: 24px;
+    font-size: 0.8rem;
+  }
+
+  .menu {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(10, 10, 15, 0.95);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-top: 1px solid var(--border-subtle);
+    padding: 12px 0;
+    justify-content: center;
+    gap: 2.5rem;
+    z-index: 100;
+  }
+
+  .menu a {
+    font-size: 0.8rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cta-btn {
+    padding: 6px 14px;
+    font-size: 0.8rem;
+  }
+}
 </style>

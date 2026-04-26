@@ -315,4 +315,43 @@ h1 {
   0%   { opacity: 1; top: 6px; }
   100% { opacity: 0; top: 18px; }
 }
+
+/* ── Mobile Responsive ── */
+@media (max-width: 900px) {
+  .hero-inner {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 3rem;
+    padding: 20px;
+  }
+
+  .hero-text {
+    align-items: center;
+  }
+
+  .hero-stats {
+    justify-content: center;
+  }
+
+  .hero-actions {
+    justify-content: center;
+  }
+
+  .tech-row {
+    justify-content: center;
+  }
+
+  .hero-photo-col {
+    grid-row: 1; /* Move photo above text on mobile */
+  }
+
+  .photo-ring {
+    width: 220px;
+    height: 220px;
+  }
+  
+  h1 {
+    font-size: 2.2rem;
+  }
+}
 </style>

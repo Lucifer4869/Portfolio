@@ -267,4 +267,31 @@ const projects = [
   color: var(--text-secondary);
   font-weight: 500;
 }
+
+/* ── Mobile Responsive ── */
+@media (max-width: 900px) {
+  .award-spotlight {
+    grid-template-columns: 1fr;
+    text-align: center;
+    padding: 1.5rem;
+  }
+  
+  .award-spotlight::before {
+    display: none;
+  }
+  
+  .award-photo-wrap {
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+}
 </style>

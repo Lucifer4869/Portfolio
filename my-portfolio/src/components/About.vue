@@ -344,4 +344,25 @@ a.bio-contact-item:hover { color: var(--accent-light); }
   border-radius: 99px;
   transition: width 0.8s ease;
 }
+
+/* ── Mobile Responsive ── */
+@media (max-width: 900px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .bio-card {
+    position: static;
+  }
+  
+  .lang-icons-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 500px) {
+  .lang-icons-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
 </style>

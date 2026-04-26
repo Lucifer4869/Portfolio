@@ -291,4 +291,21 @@ async function handleSubmit() {
   color: var(--text-muted); font-size: 0.875rem;
 }
 .ft-accent { color: var(--accent-light); font-weight: 600; }
+
+/* ── Mobile Responsive ── */
+@media (max-width: 900px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+  
+  .contact-form {
+    padding: 1.5rem;
+  }
+}
 </style>
