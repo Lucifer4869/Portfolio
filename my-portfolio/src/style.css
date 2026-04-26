@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bg-primary: #0a0a0f;
+  --bg-secondary: #111118;
+  --bg-card: #16161f;
+  --accent: #7c3aed;
+  --accent-light: #a855f7;
+  --accent-glow: rgba(124, 58, 237, 0.35);
+  --text-primary: #f1f0ff;
+  --text-secondary: #9ca3b8;
+  --text-muted: #4b5268;
+  --border: rgba(124, 58, 237, 0.18);
+  --border-subtle: rgba(255,255,255,0.06);
+  --nav-height: 70px;
+  --radius: 14px;
+  --radius-sm: 8px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+#app {
+  width: 100%;
+}
+
+/* ── Scrollbar ── */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--bg-primary); }
+::-webkit-scrollbar-thumb { background: var(--accent); border-radius: 99px; }
+
+/* ── Selection ── */
+::selection { background: var(--accent); color: #fff; }
+
+/* ── Shared container ── */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 50px;
+}
+
+/* ── Section heading ── */
+.section-title {
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 0.5rem;
+  background: linear-gradient(135deg, var(--text-primary), var(--accent-light));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.section-subtitle {
+  text-align: center;
+  color: var(--text-secondary);
+  font-size: 1rem;
+  margin-bottom: 3rem;
+}
+
+/* ── Tag badge ── */
+.tag {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 99px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  background: rgba(124, 58, 237, 0.15);
+  color: var(--accent-light);
+  border: 1px solid var(--border);
+  letter-spacing: 0.04em;
+}
