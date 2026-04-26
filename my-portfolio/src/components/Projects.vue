@@ -36,6 +36,7 @@ const projects = [
     status: 'Completed',
     image: null,
     featured: false,
+    link: 'https://cmm-universal.com/'
   },
   {
     id: 4,
@@ -48,6 +49,18 @@ const projects = [
     image: null,
     featured: false,
   },
+  {
+    id: 5,
+    title: 'Crystalbridge Home Builder',
+    description: 'เว็บไซต์บริษัทรับสร้างบ้าน (พัฒนาในช่วงฝึกงาน) นำเสนอโมเดลบ้าน 3D และบริการรับสร้างบ้านครบวงจร พร้อมออกแบบ UI ให้ทันสมัยใช้งานง่าย',
+    tags: ['Frontend', 'Web Development', 'UI/UX'],
+    icon: '🏠',
+    color: '#f97316',
+    status: 'Completed',
+    image: null,
+    featured: false,
+    link: 'https://visionary-cuchufli-08e2fa.netlify.app/'
+  }
 ]
 
 function openLink(url) {
