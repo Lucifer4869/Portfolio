@@ -13,6 +13,7 @@ const projects = [
     status: 'Completed',
     image: null,
     featured: true,
+    link: 'https://github.com/Lucifer4869/rfid2'
   },
   {
     id: 2,
@@ -59,7 +60,7 @@ const projects = [
     status: 'Completed',
     image: null,
     featured: false,
-    link: 'https://visionary-cuchufli-08e2fa.netlify.app/'
+    link: 'https://grand-starship-91c944.netlify.app/'
   }
 ]
 
